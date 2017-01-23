@@ -4,45 +4,31 @@
 	<meta charset="UTF-8">
 	<title>Boot Store</title>
 	<link rel="stylesheet" href="css/normalize.css">	
-	<link rel="stylesheet" href="css/style.css">	
+	<link rel="stylesheet" href="css/style.css">
 	<link href='https://fonts.googleapis.com/css?family=Hind:400,300,500,600,700' rel='stylesheet' type='text/css'>
 </head>
 <body>
 	<header>
-			<div class="wrapper">
-			<div class="header__logo">
-				<p>fooseshoes</p>
-			</div>
-			<div class="header__login">LOGIN or REGISTER</div>		
+        <div class="wrapper">
+            <p class="header__logo">fooseshoes</p>
+			<div class="header__login">LOGIN or REGISTER</div>
 			<div class="header__search"><img src="images/search.png" alt="" width="14" height="14" border="0" /></div>
 		</div>
 	</header>
-	<div class="heading wrapper">
-		<div class="heading__nav">
-			<ul>
-				<li><a href="#">Home</a></li>
-			</ul>
-			<ul>
-				<li><a href="#">Products</a></li>
-			</ul>
-			<ul>
-				<li><a href="#">About</a></li>
-			</ul>
-			<ul>
-				<li><a href="#">Pages</a></li>
-			</ul>
-			<ul>
-				<li><a href="#">Blog</a></li>
-			</ul>
-			<ul>
-				<li><a href="#">Contact</a></li>
-			</ul>
+	<div class="nav-panel wrapper">
+        <ul class="nav-panel__nav">
+            <li class="nav-panel__nav-item nav-panel__nav-item--active"><a href="#">Home</a></li>
+            <li class="nav-panel__nav-item"><a href="#">Products</a></li>
+            <li class="nav-panel__nav-item"><a href="#">About</a></li>
+            <li class="nav-panel__nav-item"><a href="#">Pages</a></li>
+            <li class="nav-panel__nav-item"><a href="#">Blog</a></li>
+            <li class="nav-panel__nav-item"><a href="#">Contact</a></li>
+        </ul>
+		<div class="nav-panel__basket">
+			<div class="nav-panel__num">0</div>
 		</div>
-		<div class="heading__basket">
-			<div class="heading__num">0</div>
-		</div>
-		<div class="heading__star">
-			<div class="heading__score">30</div>
+		<div class="nav-panel__star">
+			<div class="nav-panel__score">30</div>
 		</div>		
 	</div>
 	<div class="clear"></div>
@@ -55,80 +41,90 @@
 				</div>
 				<div class="banner__icons"></div>
 			</div>
-		</div><!-- banner -->
+    </div><!-- banner -->
 	<div class="brands">
 		<div class="wrapper">
 			<div class="brands__line">
 				<div class="brands__lineblock">
-					<div class="brands__lineblock_active"></div>
+					<div class="brands__innerblock brands__innerblock--active"></div>
 				</div>
 				<div class="brands__lineblock">
+                    <div class="brands__innerblock"></div>
 				</div>
 				<div class="brands__lineblock">
+                    <div class="brands__innerblock"></div>
 				</div>
 				<div class="brands__lineblock">
+                    <div class="brands__innerblock"></div>
 				</div>
 				<div class="brands__lineblock">
+                    <div class="brands__innerblock"></div>
 				</div>				
 			</div>
 			<div class="clear"></div>
 			<div class="brands__nav">
-				<div class = "brands__item"><a href="#">Pink Shoe<span>Now af $145,99</span></a></div>
-				<div class = "brands__item"><a href="#">Anna Field<span>Limited Edition</span></a></div>
-				<div class = "brands__item"><a href="#">Prada<span>Summer is coming</span></a></div>
-				<div class = "brands__item"><a href="#">Casadei<span>All Colors avaiable</span></a></div>
-				<div class = "brands__item"><a href="#">Mellow Yellow<span>Free delivery</span></a></div>
+				<div class = "brands__item"><a class = "brands__link" href="#">Pink Shoe<span class = "brands__price">Now af $145,99</span></a></div>
+				<div class = "brands__item"><a class = "brands__link" href="#">Anna Field<span class = "brands__price">Limited Edition</span></a></div>
+				<div class = "brands__item"><a class = "brands__link" href="#">Prada<span class = "brands__price">Summer is coming</span></a></div>
+				<div class = "brands__item"><a class = "brands__link" href="#">Casadei<span class = "brands__price">All Colors avaiable</span></a></div>
+				<div class = "brands__item"><a class = "brands__link" href="#">Mellow Yellow<span class = "brands__price">Free delivery</span></a></div>
 			</div>
 		</div>
 	</div><!-- brands -->
 	<div class="clear"></div>
-	<div class="special">
+	<div class="special-offers">
 		<div class="wrapper">
-			<figure class="special__img"><img src="images/boot_03.jpg" alt="" width="300" height="180" border="0" /><figcaption>on sale</figcaption></figure>
-			<figure class="special__img center"><img src="images/boot_05.jpg" alt="" width="301" height="180" border="0" /><figcaption>special offers</figcaption></figure>
-			<figure class="special__img right"><img src="images/boot_07.jpg" alt="" width="300" height="180" border="0" /><figcaption>must have</figcaption></figure>
+			<figure class="special-offers__img"><img src="images/boot_03.jpg" alt="" width="300" height="180" border="0" />
+                <figcaption class="special-offers__caption">on sale</figcaption>
+            </figure>
+			<figure class="special-offers__img special-offers__img--center"><img src="images/boot_05.jpg" alt="" width="301" height="180" border="0" />
+                <figcaption class="special-offers__caption">special offers</figcaption>
+            </figure>
+			<figure class="special-offers__img special-offers__img--right"><img src="images/boot_07.jpg" alt="" width="300" height="180" border="0" />
+                <figcaption class="special-offers__caption">must have</figcaption>
+            </figure>
 		</div>
 	</div>
-	<main style="background-color: #ebe7df"> 
-		<div class="wrapper">
+	<main class="main">
+		<div class="wrapper products">
 			<div class="arrivals">
 				<h2>New arrivals on FooseShoes</h2>
-				<div class="show">Show All</div>
+				<div class="show-button">Show All</div>
 				<div class="clear"></div>
-				<figure><img src="images/boot_12.jpg" alt="" width="300" height="269" border="0" /></figure>
-				<figure class="center"><img src="images/boot_14.jpg" alt="" width="300" height="269" border="0" /></figure>
-				<figure class="right"><img src="images/boot_16.jpg" alt="" width="300" height="269" border="0" /></figure>
+				<figure class="arrivals__img"><img src="images/boot_12.jpg" alt="" width="300" height="269" border="0" /></figure>
+				<figure class="arrivals__img arrivals__img--center"><img src="images/boot_14.jpg" alt="" width="300" height="269" border="0" /></figure>
+				<figure class="arrivals__img arrivals__img--right"><img src="images/boot_16.jpg" alt="" width="300" height="269" border="0" /></figure>
 			</div>
 			<div class="best">
 				<h2>Best sellers of the month</h2>
 				<div class="show">Show All</div>
 				<div class="clear"></div>
-				<figure><img src="images/boot_20.jpg" alt="" width="300" height="269" border="0" /></figure>
-				<figure class="center"><img src="images/boot_21.jpg" alt="" width="300" height="269" border="0" /></figure>
-				<figure class="right"><img src="images/boot_22.jpg" alt="" width="300" height="269" border="0" /></figure>
+				<figure class="best__img"><img src="images/boot_20.jpg" alt="" width="300" height="269" border="0" /></figure>
+				<figure class="best__img best__img--center" class="center"><img src="images/boot_21.jpg" alt="" width="300" height="269" border="0" /></figure>
+				<figure class="best__img best__img--right" class="right"><img src="images/boot_22.jpg" alt="" width="300" height="269" border="0" /></figure>
 			</div>
 			<div class="clear"></div>
-			<div class="line"></div>
+			<div class="line-divider"></div>
 			<div class="shipping">
 				<h3>FREE SHIPPING</h3>
-				<p>Vivamus metus turpis, bibendum vitae euismod vel, vulputate vel nibh. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec erat sem,</p>
+				<p class="products__text">Vivamus metus turpis, bibendum vitae euismod vel, vulputate vel nibh. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec erat sem,</p>
 			</div><!-- shipping -->
 			<div class="testimonials">
 				<h3>TESTIMONIALS</h3>
-				<p>Vel, vulputate vel nibh. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec erat sem, vehicula id dictum sit [...]<br>
-				<span>- John Doe -</span></p>
+				<p class="products__text">Vel, vulputate vel nibh. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec erat sem, vehicula id dictum sit [...]<br>
+				<span class="testimonials__author">- John Doe -</span></p>
 			</div><!-- testimonials -->
 			<div class="blog-news">
 				<h3>BLOG NEWS</h3>
-				<figure class="news">
-					<img src="images/apr.png" alt="" width="36" height="36" border="0" />
+				<figure class="blog-news__article">
+					<img class="blog-news__image" src="images/apr.png" alt="" width="36" height="36" border="0" />
 					<h4>Nice & clean. The best for you blog!</h4>
-					<p>Vivamus metus turpis, bibendum vitae euismod vel</p>
+					<p class="products__text">Vivamus metus turpis, bibendum vitae euismod vel</p>
 				</figure>
-				<figure class="news">
-					<img src="images/apr.png" alt="" width="36" height="36" border="0" />
+				<figure class="blog-news__article">
+					<img class="blog-news__image" src="images/apr.png" alt="" width="36" height="36" border="0" />
 					<h4>What an Ecommerce theme!</h4>
-					<p>Vivamus metus turpis, bibendum vitae euismod vel</p>
+					<p class="products__text">Vivamus metus turpis, bibendum vitae euismod vel</p>
 				</figure>
 			</div><!-- blog-news -->				
 		</div><!-- wrapper -->	
@@ -136,18 +132,18 @@
 	<div class="clear"></div>
 <div class="widgets">
 	<div class="wrapper2">
-		<div class="row-wiget">
+		<div class="row-widget">
 			<div class="text-widget">
 				<h3>TEXT WIDGET</h3>
 				<p>Donec sed odio dui. Nulla vitae elit libero, a pharetra augue. Nullam id dolor id nibh ultricies vehicula ut id elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
 			</div>		
-			<div class="ttr-widget">
-				<h3>TWITTER WIDGET</h3>
-				<ul>
-					<li><span>@ericafustero</span>Why thank you. Your work looks awesome by the way!<span> @treemelody</span></li>
-					<li>19 days ago</li>
-					<li><span>@roymarvelous<span> You can seek a refund through TF if it is not as advertised - but it is :)</li>
-					<li>21 days ago</li>
+			<div class="tweet-widget">
+				<h3 class="tweet-widget__heading">TWITTER WIDGET</h3>
+				<ul class="tweet-widget__list">
+					<li class="tweet-widget__item"><span class="tweet-widget__mail">@ericafustero</span>Why thank you. Your work looks awesome by the way!<span> @treemelody</span></li>
+					<li class="tweet-widget__item">19 days ago</li>
+					<li class="tweet-widget__item"><span>@roymarvelous<span> You can seek a refund through TF if it is not as advertised - but it is :)</li>
+					<li class="tweet-widget__item">21 days ago</li>
 				</ul>
 			</div>			
 			<div class="fkr-widget">
@@ -157,23 +153,23 @@
 			</div>
 		</div>
 	</div>	
-	<div class="line2"></div>
+	<div class="footer-divider"></div>
 	<div class="wrapper2">
-		<div class="searchblock">
-			<input type="text" placeholder="Enter email for newsleter"><div class="searchblock__arrow">&gt</div>
+		<div class="search-block">
+			<input class="search-input" type="text" placeholder="Enter email for newsleter"><div class="searchblock__arrow">&gt</div>
 		</div>
 		<div class="social-icons"></div>
-	</div>	
+	</div>
 </div>
-<footer>
+<footer class="footer">
 	<div class="wrapper">
-		<p>Copyright&copy;Fooseshoes 2013.<br>Designed by EnzoLiVolti.</p>
-		<ul>
-			<li><a href="#">Home /</a></li>
-			<li><a href="#">Support /</a></li>
-			<li><a href="#">Terms and Conditions /</a></li>
-			<li><a href="#">Faqs /</a></li>
-			<li><a href="#">Contact us</a></li>
+		<p class="footer-text">Copyright&copy;Fooseshoes 2013.<br>Designed by EnzoLiVolti.</p>
+		<ul class="footer-menu">
+			<li class="footer-menu__item"><a class="footer-menu__link" href="#">Home /</a></li>
+			<li class="footer-menu__item"><a class="footer-menu__link" href="#">Support /</a></li>
+			<li class="footer-menu__item"><a class="footer-menu__link" href="#">Terms and Conditions /</a></li>
+			<li class="footer-menu__item"><a class="footer-menu__link" href="#">Faqs /</a></li>
+			<li class="footer-menu__item"><a class="footer-menu__link" href="#">Contact us</a></li>
 		</ul>
 	</div>
 </footer>

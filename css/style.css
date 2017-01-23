@@ -1,3 +1,5 @@
+/* --------Global--------- */
+
 body {
 	font-family: 'Hind', sans-serif;
 	max-width: 1400px;
@@ -11,6 +13,16 @@ p , a {
 	margin: 0;
 }
 
+h2 {
+    display: inline;
+    line-height: 80px;
+}
+
+h4  {
+    display: inline;
+    margin: 0;
+}
+
 .clear {
 	clear: both;
 }
@@ -19,7 +31,7 @@ p , a {
 	margin: 0 auto;	
 }
 
-/* ----------------- */
+/* --------Header--------- */
 
 header {
 	height: 45px;
@@ -27,11 +39,8 @@ header {
 }
 
 .header__logo {
-	margin-left: 30px;
-	float: left;
-}
-
-.header__logo p {
+    margin-left: 30px;
+    float: left;
 	color: #57c5a0;
 	font-size: 26px;
 	text-transform: uppercase;
@@ -55,16 +64,16 @@ header {
 }
 
 
-/* ------------ */
+/* -----Main nav------- */
 
 
-.heading__nav ul {
+.nav-panel__nav {
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
 }
 
-.heading__nav ul li {
+.nav-panel__nav-item {
 	float: left;
 	font-size: 16px;
 	border-left: 1px solid #eeeeee;
@@ -73,11 +82,15 @@ header {
 	display: inline-block;
 }
 
-.heading__nav ul li:last-child {
+.nav-panel__nav-item--active a{
+    color: #57c5a0;
+}
+
+.nav-panel__nav-item:last-child {
 	border-right: 1px solid #eeeeee;
 }
 
-.heading__star, .heading__basket {
+.nav-panel__star, .nav-panel__basket {
 	background: #fff url('../images/star.png') 15px 25px no-repeat;
 	padding: 22px 20px 22px 35px;
 	display: inline-block;
@@ -86,11 +99,11 @@ header {
 	margin: 0;
 }
 
-.heading__basket {
+.nav-panel__basket {
 	background: #fff url('../images/basket.png') 15px 25px no-repeat;
 }
 	
-.heading__score, .heading__num {
+.nav-panel__score, .nav-panel__num {
 	display: block;
 	background-color: #adadad;
 	width: 20px;
@@ -102,29 +115,32 @@ header {
 	line-height: 20px;
 }
 
-.heading__num {
+.nav-panel__num {
 	background-color: #57c5a0;
 }
 
-/* ------------- */
+/* ------Banner------- */
 
 .banner {
 	background: #fff url('../images/woman.jpg') 0 0 no-repeat;
+    position: relative;
+    height: 460px;
 }
 
 .banner, .arrivals, .best {
 	overflow: hidden;
-	
 }
+
 .banner__text {
     width: 55%;
 }
 
 .banner__wrapper {
-	width: 50%;
-	float: right;
-	box-sizing: border-box;
-	margin: 90px 0;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+    width: 50%;
 }
 
 
@@ -145,11 +161,30 @@ header {
 	cursor: pointer;
 }
 
-/* ------------- */
+/* ------Brands menu------- */
 
 .brands {
 	background-color: #2e2e2e;
 	overflow: hidden;
+}
+
+
+.brands__lineblock {
+    border-right: 2px solid #2e2e2e;
+    padding: 2px 4px;
+    width: 19%;
+    height: 6px;
+    float: left;
+}
+
+.brands__innerblock {
+    background-color: #57c5a0;
+    height: 6px;
+    display: none;
+}
+
+.brands__innerblock--active {
+    display: block;
 }
 
 .brands__item {
@@ -159,22 +194,22 @@ header {
 	box-sizing: border-box;
 }
 
-.brands__item a {
+.brands__link {
 	font-size: 18px;
 	color: #fff;
 	display: block;
 	text-align: center;
 }
 
-.brands__item a  span{
+.brands__price{
 	display: block;
 	font-size: 12px;
 	color: #fff;
 }
 
-/* ------------- */
+/* -------Special-offers------ */
 
-.special {
+.special-offers {
 	background-color: #242424;
 	overflow: hidden;
 }
@@ -186,34 +221,21 @@ header {
 	padding: 2px 0;	
 }
 
-.brands__lineblock {
-    border-right: 2px solid #2e2e2e;
-    padding: 2px 4px;
-    width: 19%;
-    height: 6px;
-	float: left;
-}
-
-.brands__lineblock_active {
-	background-color: #57c5a0;
-	height: 6px;
-}
-
-figure {
+.special-offers__img, .arrivals__img, .best__img {
     float: left;
 	position: relative;
 	box-sizing: border-box;
 }
 
-figure.center {
+.special-offers__img--center, .arrivals__img--center, .best__img--center {
 	margin-left:34px;
 }
 
-figure.right {
+.special-offers__img--right, .arrivals__img--right, .best__img--right {
 	float: right;
 }
 
-figcaption {
+.special-offers__caption {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -231,22 +253,14 @@ figcaption {
 	text-align: center;
 }
 
-	
-}
+/* ------Goods------- */
 
-/* ------------- */
-
-main {
+.main {
 	background-color: #ebe7df !important;
 	overflow: hidden;
 }
 
-h2 {
-	display: inline;
-	line-height: 80px;
-}
-
-.show {
+.show-button {
 	display: block;
 	float: right;
 	border: 1px solid #bcb5a7;
@@ -257,7 +271,7 @@ h2 {
 	cursor: pointer;
 }
 
-.line {
+.line-divider {
 	border-bottom: 1px solid #bcb5a7;
 	margin: 45px 0 25px;
 }
@@ -267,7 +281,7 @@ h2 {
 	width: 220px
 }
 
-.testimonials span  {
+.testimonials__author  {
 	font-style: italic;
 }
 
@@ -287,23 +301,18 @@ h2 {
 	width: 400px;
 }
 
-h4  {
-	display: inline;
-	margin: 0;
-}
-
-.blog-news img {
+.blog-news__image {
 	float:left;
 	margin-right: 10px;
 }
 
-.shipping p, .testimonials p, .blog-news p {
+.products__text {
 	font-size: 12px;
 	margin: -5px 0;
 }
 
 
-figure.news {
+.blog-news__article {
 	float: none;
 	margin-bottom: 9px;
 }
@@ -321,10 +330,10 @@ figure.news {
 	width: 888px;
 }
 
-.row-wiget {
+.row-widget {
 	overflow: hidden;
 }
-.row-wiget h3 {
+.row-widget h3 {
 	color: #7d7d7d;
 }
 
@@ -333,30 +342,30 @@ figure.news {
 	color: #fff;
 }
 
-.text-widget, .ttr-widget, .fkr-widget {
+.text-widget, .tweet-widget, .fkr-widget {
 	display: inline;
 	float: left;
 } 
 
-.text-widget, .ttr-widget {
+.text-widget, .tweet-widget {
 	width: 250px;
 }
 
-.ttr-widget h3 {
+.tweet-widget__heading {
 	margin-left: 40px;
 }
 
-.ttr-widget ul {
+.tweet-widget__list {
 	list-style-type: none;
 	margin-left: 0;
 }
-.ttr-widget  li {
+.tweet-widget__item {
 	font-style: italic;
 	font-size: 12px;
 	color: #fff;
 }
 
-.ttr-widget  span {
+.tweet-widget__mail {
 	color: #57c5a0;
 }
 
@@ -364,18 +373,18 @@ figure.news {
 	float: right;
 }
 
-.line2 {
+.footer-divider {
 	border-bottom: 2px solid #1c1c1c;
 	margin: 25px 0;
 }
 
-.searchblock {
+.search-block {
 	margin: 35px 0 45px;
 	height: 35px;
 	display: inline-block;
 }
 
-input {
+.search-input{
 	background-color: #2e2e2e;
 	border-color: #2e2e2e;
 	outline: none;
@@ -405,33 +414,33 @@ input {
 	font-size: 12px;
 }
 
-footer {
+.footer {
 	background-color: #2e2e2e;
 	height: 90px;
 }
 
-footer >.wrapper {
+.footer >.wrapper {
 	overflow: hidden;
 }
 
-footer p {
+.footer-text {
 	float: left;
 	margin-top: 30px;
 }
 
-footer p, footer ul a  {
+.footer-text, .footer-menu__link  {
 	color: #7d7d7d;
 	font-size: 12px;
 	text-decoration: none;
 }
 
-footer ul {
+.footer-menu {
 	margin: 30px 0;
 	list-style-type: none;
 	float: right;
 }
 
-footer ul li {
+.footer-menu__item {
 	display: inline;
 }
 
